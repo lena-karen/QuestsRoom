@@ -6,21 +6,39 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:icons": "tsx ./build-icons.mts"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.3"
+    "@ant-design/nextjs-registry": "^1.0.0",
+    "@prisma/client": "5.13.0",
+    "antd": "^5.17.3",
+    "bcryptjs": "^2.4.3",
+    "clsx": "2.1.1",
+    "fs-extra": "11.2.0",
+    "next": "14.2.3",
+    "node-html-parser": "6.1.13",
+    "react": "18",
+    "react-dom": "18",
+    "react-hook-form": "7.51.4",
+    "reactjs-popup": "2.0.6",
+    "tailwind-merge": "2.3.0",
+    "tsx": "4.8.2",
+    "validator": "^13.12.0",
+    "zod": "3.23.8"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.3"
+    "@hookform/resolvers": "3.3.4",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "20",
+    "@types/react": "18",
+    "@types/react-dom": "18",
+    "@types/validator": "13.11.9",
+    "eslint": "8",
+    "eslint-config-next": "14.2.3",
+    "postcss": "8",
+    "prisma": "5.13.0",
+    "tailwindcss": "3.4.1",
+    "typescript": "5"
   }
 }

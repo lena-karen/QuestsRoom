@@ -16,14 +16,45 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.wrapper {
+  @apply px-[32px]
+}
+/* 
+html {
+  height: 100%;
+} */
+#home, #contacts, #error, #notFound, #signup {
+  background-image: url('/images/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  min-height: 100vh;
+  padding-top: 74px;
+}
+
+.default-title {
+  @apply ml-[21px] mb-[15px] text-_FFFFFF text-2xl font-bold
+}
+
+@layer base {
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number'] {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield !important;
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="checkbox"]:enabled:checked {
+  background-color: #d88304 !important;
+  color: white;
 }
 
 @layer utilities {

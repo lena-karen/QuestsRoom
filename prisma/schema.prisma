@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Quest {
+  id Int @id @default(autoincrement())
+  title String
+  description String
+  previewImg String
+  coverImg String
+  type Type
+  level Level
+  peopleCount Int[]
+  duration Int
+}
+
+model Order {
+  id Int @id @default(autoincrement())
+  name String
+  peopleCount Int
+  phone String
+  isLegal Boolean
+}
+
+model User {
+  id String @id @map("_id")
+  email String @unique
+  password String
+}
+
+enum Type {
+  horror
+  mystic 
+  adventures
+  detective
+  sci_fi
+}
+
+enum Level {
+  easy
+  medium
+  hard
+}
